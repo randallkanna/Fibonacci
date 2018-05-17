@@ -1,8 +1,17 @@
-pragma solidity ^0.4.4;
-
+pragma solidity ^0.4.19;
 
 contract Fibonacci {
-  function Fibonacci() {
-    // constructor
+
+uint[] fibseries;
+
+  function generateFib(uint n) public {
+    fibseries.push(1);
+    fibseries.push(1);
+
+    for (uint i=2; i < n ; i++) {
+      fibseries.push(fibseries[i-1] + fibseries[i-2]);
+    }
+
   }
+
 }
